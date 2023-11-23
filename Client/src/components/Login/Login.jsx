@@ -1,5 +1,6 @@
-// Login.js
+
 import React, { useState } from 'react';
+import './Login.css'; 
 import SignUp from '../SingUp/SingUp';
 
 const Login = (props) => {
@@ -8,7 +9,7 @@ const Login = (props) => {
   const [isSignUp, setIsSignUp] = useState(false);
 
   const handleLogin = async () => {
-    // Lógica de autenticación aquí
+
   };
 
   const handleToggle = () => {
@@ -16,47 +17,45 @@ const Login = (props) => {
   };
 
   return (
-    <div>
-      <div className="login-container">
-        {isSignUp ? (
-          <SignUp />
-        ) : (
-          <>
-            <h2>Iniciar Sesión</h2>
-            <form>
-              <label>
-                Usuario:
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-              </label>
-              <br />
-              <label>
-                Contraseña:
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </label>
-              <br />
-              <button type="button" onClick={handleLogin}>
-                Iniciar Sesión
-              </button>
-            </form>
-          </>
-        )}
-        <p>
-          {isSignUp
-            ? '¿Ya tienes una cuenta? '
-            : '¿No tienes una cuenta? '}
-          <button onClick={handleToggle}>
-            {isSignUp ? 'Iniciar Sesión' : 'Crear Cuenta'}
-          </button>
-        </p>
-      </div>
+    <div className="login-container">
+      {isSignUp ? (
+        <SignUp />
+      ) : (
+        <>
+          <h2>Login</h2>
+          <form>
+            <label>
+              Username:
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </label>
+            <br />
+            <label>
+              Password:
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
+            <br />
+            <button type="button" onClick={handleLogin}>
+              Log In
+            </button>
+          </form>
+        </>
+      )}
+      <p>
+        {isSignUp
+          ? 'Already have an account? '
+          : "Don't have an account? "}
+        <button onClick={handleToggle}>
+          {isSignUp ? 'Log In' : 'Sign Up'}
+        </button>
+      </p>
     </div>
   );
 };
