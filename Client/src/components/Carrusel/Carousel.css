@@ -1,0 +1,38 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 1s linear; /* Ajusta la velocidad aquí */
+  }
+  
+  .carousel-inner img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    background-color: transparent; /* Fondo completamente transparente */
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto de transición en el color de fondo */
+  }
+  
+  .arrow-button:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo al pasar el mouse */
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
