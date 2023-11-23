@@ -1,12 +1,16 @@
 /* Estilo básico para la barra de navegación */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3498db; /* Color azul */
-    padding: 5px;
-    color: #fff; /* Color de texto blanco */
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3498db; /* Ajusta el color de fondo según tu diseño */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para un aspecto más agradable */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos en la página */
   }
   
   /* Estilo para el logo */
