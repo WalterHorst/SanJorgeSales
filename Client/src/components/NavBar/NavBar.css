@@ -1,43 +1,92 @@
-/* Estilo básico para la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3498db; /* Color azul */
-    padding: 5px;
-    color: #fff; /* Color de texto blanco */
 
-  }
-  
-  /* Estilo para el logo */
-.logo {
-  width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
-  height: 70px; /* Ajusta la altura para que la imagen sea proporcionalmente redonda */
-  object-fit:contain; /* Ajusta cómo la imagen se adapta al contenedor sin distorsionar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3498db;
+  padding: 5px;
+  color: #fff;
 }
 
-  
-  /* Estilo para el ícono de usuario */
-  .user-icon {
-    font-size: 20px;
-  }
-  
-  /* Estilo para el botón de iniciar sesión */
-  .login-button {
-    margin-left: 10px;
-  }
-  
-  .login-button button {
-    background-color: #fff; /* Color de fondo blanco */
-    color: #3498db; /* Color de texto azul */
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .login-button button:hover {
-    background-color: #2980b9; /* Cambio de color al pasar el ratón */
-    color: #fff;
-  }
-  
+.logo {
+  width: 200px;
+  height: 70px;
+  object-fit: contain;
+}
+
+
+
+.login-button {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.user-icon {
+  font-size: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1; 
+}
+
+.login-button button {
+  background-color: #fff;
+  color: #3498db;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.login-button button:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+
+
+.nav-links {
+  display: flex; 
+  align-items: center;
+}
+
+.dropdown,
+.aderidos-dropdown {
+  position: relative;
+  margin-left: 10px; 
+}
+
+.dropdown-content,
+.aderidos-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1e90ff; 
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a,
+.aderidos-dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s; 
+}
+
+.dropdown-content a:hover,
+.aderidos-dropdown-content a:hover {
+  background-color: #007acc; /* Color de fondo en hover */
+}
+
+.dropdown:hover .dropdown-content,
+.aderidos-dropdown:hover .aderidos-dropdown-content {
+  display: block;
+  top: 100%; /* Ajusta la posición para que aparezca debajo del botón */
+  left: 0;
+}
