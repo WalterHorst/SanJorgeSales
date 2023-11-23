@@ -1,0 +1,43 @@
+/* Estilo básico para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db; /* Color azul */
+    padding: 5px;
+    color: #fff; /* Color de texto blanco */
+
+  }
+  
+  /* Estilo para el logo */
+.logo {
+  width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
+  height: 70px; /* Ajusta la altura para que la imagen sea proporcionalmente redonda */
+  object-fit:contain; /* Ajusta cómo la imagen se adapta al contenedor sin distorsionar */
+}
+
+  
+  /* Estilo para el ícono de usuario */
+  .user-icon {
+    font-size: 20px;
+  }
+  
+  /* Estilo para el botón de iniciar sesión */
+  .login-button {
+    margin-left: 10px;
+  }
+  
+  .login-button button {
+    background-color: #fff; /* Color de fondo blanco */
+    color: #3498db; /* Color de texto azul */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-button button:hover {
+    background-color: #2980b9; /* Cambio de color al pasar el ratón */
+    color: #fff;
+  }
+  
