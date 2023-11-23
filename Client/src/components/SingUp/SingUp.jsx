@@ -1,29 +1,50 @@
-// SignUp.js
+
 import React, { useState } from 'react';
+import './SignUp.css'; 
 
 const SignUp = () => {
-  const [username, setUsername] = useState('');
+  const [locality, setLocality] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSignUp = async () => {
-    // Lógica de creación de cuenta aquí
+   
   };
 
   return (
-    <div>
-      <h2>Crear Cuenta</h2>
+    <div className="signup-container">
+      <h2>Sign Up</h2>
       <form>
         <label>
-          Usuario:
+          Locality:
           <input
             type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={locality}
+            onChange={(e) => setLocality(e.target.value)}
           />
         </label>
         <br />
         <label>
-          Contraseña:
+          Email:
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Password:
           <input
             type="password"
             value={password}
@@ -32,7 +53,7 @@ const SignUp = () => {
         </label>
         <br />
         <button type="button" onClick={handleSignUp}>
-          Registrarse
+          Sign Up
         </button>
       </form>
     </div>
