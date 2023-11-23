@@ -102,6 +102,12 @@ return (
         ></img>
       </NavLink>
     </div>
+    <div className="About">
+      <NavLink to="/about">
+       About
+      </NavLink>
+    </div>
+
     <div className="nav-links">
       <div className="dropdown" onClick={handleAderidosToggle}>
         <button className="dropbtn">Comercios Aderidos</button>
