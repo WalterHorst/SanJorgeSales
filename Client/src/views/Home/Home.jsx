@@ -1,11 +1,12 @@
 import React from "react";
 import "./Home.css";
+import Carrusel from "../../components/Carrusel/Carrusel";
 
 const Home = () => {
   return (
-    <div >
+    <div>
       <div className="home-container">
-        <h1>Bienvenido a Mi Sitio Web</h1>
+        <Carrusel>s</Carrusel>
       </div>
     </div>
   );

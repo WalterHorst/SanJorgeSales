@@ -1,6 +1,10 @@
 
 
 .navbar {
+ 
+
+  margin-top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,39 +58,4 @@
   align-items: center;
 }
 
-.dropdown,
-.aderidos-dropdown {
-  position: relative;
-  margin-left: 10px; 
-}
 
-.dropdown-content,
-.aderidos-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #1e90ff; 
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a,
-.aderidos-dropdown-content a {
-  color: #fff;
-  padding: 12px 16px;
-  display: block;
-  text-decoration: none;
-  transition: background-color 0.3s; 
-}
-
-.dropdown-content a:hover,
-.aderidos-dropdown-content a:hover {
-  background-color: #007acc; /* Color de fondo en hover */
-}
-
-.dropdown:hover .dropdown-content,
-.aderidos-dropdown:hover .aderidos-dropdown-content {
-  display: block;
-  top: 100%; /* Ajusta la posición para que aparezca debajo del botón */
-  left: 0;
-}

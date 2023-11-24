@@ -1,15 +1,11 @@
-// NavBar.js
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { FaUser } from "react-icons/fa";
 
 const NavBar = () => {
-  const [showProductLinks, setShowProductLinks] = useState(false);
-  const [showAderidosLinks, setShowAderidosLinks] = useState(false);
-
   const categories = [
+    "CATEGORIAS",
     "Comidas",
     "Ropa",
     "Repuestos",
@@ -32,6 +28,7 @@ const NavBar = () => {
   ];
 
   const aderidosList = [
+    "ADERIDOS",
     "ADN Indumentaria",
     "Alas Ferreterías",
     "Angeline Boutique",
@@ -80,16 +77,6 @@ const NavBar = () => {
     "Zalocco Repuestos",
   ];
 
-  const handleProductToggle = () => {
-    setShowProductLinks(!showProductLinks);
-    setShowAderidosLinks(false);
-  };
-
-  const handleAderidosToggle = () => {
-    setShowAderidosLinks(!showAderidosLinks);
-    setShowProductLinks(false);
-  };
-
   return (
     <div className="navbar">
       <div className="logo">
@@ -104,31 +91,29 @@ const NavBar = () => {
       <div className="About">
         <NavLink to="/about">About</NavLink>
       </div>
-
-      <div className="nav-links">
-        <div className="dropdown" onClick={handleAderidosToggle}>
-          <button className="dropbtn">Comercios Aderidos</button>
-          <div
-            className={`dropdown-content ${showAderidosLinks ? "show" : ""}`}
-          >
-            {aderidosList.map((comercio, index) => (
-              <NavLink key={index} to={`/comercios/${comercio.toLowerCase()}`}>
-                {comercio}
-              </NavLink>
-            ))}
-          </div>
-        </div>
-        <div className="dropdown" onClick={handleProductToggle}>
-          <button className="dropbtn">Categorías</button>
-          <div className={`dropdown-content ${showProductLinks ? "show" : ""}`}>
-            {categories.map((category, index) => (
-              <NavLink key={index} to={`/productos/${category.toLowerCase()}`}>
-                {category}
-              </NavLink>
-            ))}
-          </div>
-        </div>
+      <div className="categories-selector">
+        <select>
+          {categories.map((category, index) => (
+            <option key={index} value={`/category/${category.toLowerCase()}`}>
+              {category}
+            </option>
+          ))}
+        </select>
       </div>
+
+      <div className="aderidos-selector">
+        <select>
+          {aderidosList.map((aderido, index) => (
+            <option
+              key={index}
+              value={`/aderido/${aderido.toLowerCase().replace(/\s/g, "-")}`}
+            >
+              {aderido}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="login-button">
         <NavLink to="/login">
           <div className="user-icon">
