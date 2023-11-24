@@ -14,28 +14,28 @@ const Carrusel = () => (
     <div>
       <img
         style={contentStyle}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHrYlMb7e7RNFW5SJxKvU3bmmh3EBJ4UN3pw&usqp=CAU"
+        src="https://img.freepik.com/fotos-premium/tienda-frutas-verduras-fondo-pantalla-hd-8k-imagen-fotografica-stock_915071-32070.jpg?w=2000"
         alt=""
       />
     </div>
     <div>
       <img
         style={contentStyle}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA8rRZ4mUXkUZsLVmPb67QlMdjb4Z6igZFGA&usqp=CAU"
+        src="https://png.pngtree.com/background/20230427/original/pngtree-photo-of-a-store-at-night-with-other-shoppers-picture-image_2494634.jpg"
         alt=""
       />
     </div>
     <div>
       <img
         style={contentStyle}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFe3aC5zHe6fDpctfzXNJZQyxnXVzb3Oes4Q&usqp=CAU"
+        src="https://png.pngtree.com/background/20230516/original/pngtree-commercial-store-full-of-desserts-picture-image_2601589.jpg"
         alt=""
       />
     </div>
     <div>
       <img
         style={contentStyle}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIIayzuozETKf2aY9ooN2MWgf-59IL_a4mOw&usqp=CAU"
+        src="https://png.pngtree.com/background/20230519/original/pngtree-an-empty-store-at-night-on-a-rainy-day-picture-image_2663096.jpg"
         alt=""
       />{" "}
       */

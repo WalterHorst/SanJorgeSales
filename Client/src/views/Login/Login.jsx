@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import SignUp from "../SingUp/SingUp";
+import SignUp from "../../components/SingUp/SingUp";
 
 const Login = (props) => {
   const [username, setUsername] = useState("");

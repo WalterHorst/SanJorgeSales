@@ -1,41 +1,38 @@
+/* Footer Styles */
 
 .footer {
- 
   width: 100%;
-    background-color: #2980b9; 
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-   
-    margin-bottom: 0;
-     height: 20vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    margin: 0
-  }
-  .copyrigth{
-    margin-top: auto;
-  width: 100%;
-  text-align: center;
-      
-  }
-  
-  .footer h4, .footer p, .footer a {
-    font-size: 14px; 
-    transition: color 0.6s; 
-  }
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  background-color: #3498db; 
+  color: #fff; 
+  padding: 20px;
+}
 
-  .footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    color: #ffd700; 
-    text-decoration: underline;
-  }
- 
-  
+.footer div {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer a {
+  color: #fff; /* Cambia el color de los enlaces según tu preferencia */
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer h4 {
+  color: #fff; /* Cambia el color del título según tu preferencia */
+}
+
+.copyrigth {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Añade estilos adicionales según sea necesario */
