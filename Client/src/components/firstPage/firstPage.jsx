@@ -1,6 +1,6 @@
 
 import React from "react";
-import "./firstPage.css";
+import "./FirstPage";
 
 const FirstPage = () => {
     return (
