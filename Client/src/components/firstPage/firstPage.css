@@ -1,0 +1,58 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 20px;
+}
+
+/* Estilos para el título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Espaciado inferior para separar del contenido */
+    width: 100%; /* Asegura que el título ocupe todo el ancho */
+    color: rgb(32 72 113);
+}
+
+/* Estilos para cada imagen y texto */
+.image-container {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Añade esquinas redondeadas a las imágenes */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Media queries para hacerlo responsive */
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+/* ... (tus estilos existentes) */
