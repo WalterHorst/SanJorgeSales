@@ -20,7 +20,7 @@ const Login = (props) => {
           <SignUp />
         ) : (
           <>
-            <h2>Login</h2>
+            <h2 className="h2-login">Login</h2>
             <form>
               <label>
                 Username:

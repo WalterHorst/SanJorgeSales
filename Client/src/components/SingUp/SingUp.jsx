@@ -1,20 +1,17 @@
-
-import React, { useState } from 'react';
-import './SignUp.css'; 
+import React, { useState } from "react";
+import "./SignUp.css";
 
 const SignUp = () => {
-  const [locality, setLocality] = useState('');
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
+  const [locality, setLocality] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleSignUp = async () => {
-   
-  };
+  const handleSignUp = async () => {};
 
   return (
     <div className="signup-container">
-      <h2>Sign Up</h2>
+      <h2 className="h2-login ">Sign Up</h2>
       <form>
         <label>
           Locality:
