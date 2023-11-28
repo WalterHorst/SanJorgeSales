@@ -22,6 +22,7 @@ const Login = (props) => {
               onChange={(e) => setUsername(e.target.value)}
             />
             <br />
+            <br/>
             <input
               className="input-login"
               type="password"
@@ -29,7 +30,10 @@ const Login = (props) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="button" onClick={handleLogin}>
+            <br/>
+            <br/>
+            <br/>
+            <button className="Registrarme" type="button" onClick={handleLogin}>
               Inicia sesión
             </button>
           </form>

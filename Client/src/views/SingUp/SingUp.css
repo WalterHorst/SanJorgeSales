@@ -1,0 +1,70 @@
+
+.padreLogin {
+    min-height: 100vh;
+    margin-top: 0.1rem;
+    position: relative;
+    padding-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+  }
+  
+  .login-container {
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(8, 2, 2, 20);
+    max-width: 300px; 
+    width: 100%;
+    margin: auto;
+    height: 25rem;
+  }
+  
+  .login {
+  color:rgb(32 72 113);
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+  }
+  
+  .input-login {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(32 72 113);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    color:rgb(32 72 113);
+  }
+  
+  .Btn-login {
+    background-color:rgb(32 72 113);;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .Btn-login:hover {
+    background-color: #007acc;
+  }
+  
+  .divparrafo{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .btnregistro{
+    background-color:rgb(32 72 113);;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 2.5rem;
+  }
+  
