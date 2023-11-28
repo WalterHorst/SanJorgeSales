@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Login from "./views/Login/Login";
 import Footer from "./components/Footer/Footer";
 import About from "./views/About/About";
-import SignUp from "./components/SingUp/SingUp";
+import SignUp from "./views/SingUp/SingUp";
 
 function App() {
   return (

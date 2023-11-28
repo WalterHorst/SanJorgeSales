@@ -1,5 +1,5 @@
 
-.padreLogin {
+.padreSingUp {
   min-height: 100vh;
   margin-top: 0.1rem;
   position: relative;
@@ -11,15 +11,15 @@
   width:100vw;
 }
 
-.login-container {
+.SingUp-container {
   background-color: #fdfdfd;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(8, 2, 2, 20);
-  max-width: 300px; 
+  max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
   width: 100%;
   margin: auto;
-  height: 20rem;
+  height: 30rem;
 }
 
 .login {
@@ -30,7 +30,7 @@ color:rgb(32 72 113);
   margin-bottom: 15px;
 }
 
-.input-login {
+.input-SingUp {
   width: 100%;
   padding: 10px;
   border: 1px solid rgb(32 72 113);
@@ -40,7 +40,7 @@ color:rgb(32 72 113);
   color:rgb(32 72 113);
 }
 
-.Btn-login {
+.Registrarme {
   background-color:rgb(32 72 113);;
   color: #fff;
   padding: 10px 15px;
@@ -59,7 +59,7 @@ color:rgb(32 72 113);
   justify-content: space-around;
 }
 
-.btnregistro{
+.iniciarsesion{
   background-color:rgb(32 72 113);;
   color: #fff;
   border: none;
