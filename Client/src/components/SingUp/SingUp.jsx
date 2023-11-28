@@ -13,14 +13,12 @@ const SignUp = () => {
     <div className="signup-container">
       <h2 className="h2-login ">Sign Up</h2>
       <form>
-        <label>
-          Locality:
           <input
             type="text"
+            placeholder="localidad"
             value={locality}
             onChange={(e) => setLocality(e.target.value)}
           />
-        </label>
         <br />
         <label>
           Email:

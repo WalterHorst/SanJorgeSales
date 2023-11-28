@@ -13,10 +13,10 @@ const Home = () => {
     <div>
       <div className="home-container">
         {/* <Carrusel></Carrusel> */}
-        <FirstPage></FirstPage>
         <SecondPage></SecondPage>
         <ThirdPage></ThirdPage>
         <FourtPage></FourtPage>
+        <FirstPage></FirstPage>
         <FifthPage></FifthPage>
 
       </div>

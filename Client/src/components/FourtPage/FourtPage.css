@@ -15,3 +15,16 @@
   justify-content: center;
 text-align: center;
 }
+/* Tu archivo de estilos */
+
+h2 {
+  text-indent: 20px; /* Sangría de 20px */
+}
+
+/* Añadir un espacio después de "usuario" */
+h2::after {
+  content: "\00a0"; /* Código del espacio sin romper */
+  display: inline; /* Hace que el espacio sea visible */
+}
+
+/* Puedes ajustar estos valores según tus preferencias */
