@@ -1,3 +1,4 @@
+import "./BurgerBtn.css";
 const BurgerBtn = () => {
   return (
     <label class="burger" for="burger">
