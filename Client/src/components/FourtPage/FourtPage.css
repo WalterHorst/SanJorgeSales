@@ -1,0 +1,10 @@
+.second-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Ajusta según sea necesario */
+  }
+  
+  .image {
+    width:150rem ; /* Ajusta el tamaño de la imagen según sea necesario */
+  }

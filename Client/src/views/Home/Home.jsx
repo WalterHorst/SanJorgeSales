@@ -4,8 +4,7 @@ import Carrusel from "../../components/Carrusel/Carrusel";
 import FirstPage from "../../components/FirstPage/FirstPage";
 import SecondPage from "../../components/secondPage/SecondPage";
 import ThirdPage from "../../components/ThirdPage/ThirdPage";
-
-
+import FourtPage from "../../components/FourtPage/FourtPage";
 
 const Home = () => {
   return (
@@ -13,8 +12,9 @@ const Home = () => {
       <div className="home-container">
         <Carrusel></Carrusel>
         <FirstPage></FirstPage>
-        <SecondPage></SecondPage>
+        <SecondPage></SecondPage
         <ThirdPage></ThirdPage>
+        <FourtPage></FourtPage
       </div>
     </div>
   );
