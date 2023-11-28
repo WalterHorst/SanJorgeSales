@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import { FaUser } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 import logo from "../../assets/Imagenes/Logo.png";
 
 const NavBar = () => {
@@ -11,12 +11,31 @@ const NavBar = () => {
           <img className="logo" src={logo} alt="Logo"></img>
         </NavLink>
       </div>
+      <div className="social-icons">
+        <a href="mailto:TUCORREO@DOMINIO.COM">
+          <FaEnvelope />
+        </a>
+        <a
+          href="https://www.instagram.com/TUINSTAGRAM"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="https://wa.me/TUNUMERODETELEFONO"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaWhatsapp />
+        </a>
+      </div>
       <div className="login-button-container">
         <NavLink to="/login">
-          <button className="login-button">Iniciar Sesión</button>
+          <button className="inicio">Iniciar Sesión</button>
         </NavLink>
-        <NavLink>
-          <button className="login-button">Crear cuenta</button>
+        <NavLink to={"registro"}>
+          <button className="inicio2">Crear cuenta</button>
         </NavLink>
       </div>
     </div>

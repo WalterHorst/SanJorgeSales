@@ -7,7 +7,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(32 72 113);
-
   color:#3498db;
 }
 
@@ -17,15 +16,6 @@ border-radius: 0;
   height: 70px;
   object-fit: cover;
 }
-
-
-
-.login-button {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-}
-
 .user-icon {
   font-size: 20px;
   margin-right: 5px;
@@ -35,23 +25,56 @@ border-radius: 0;
 }
 
 .login-button-container{
+  align-items: center;
+  margin-right: 1rem;
   display: flex;
+  gap: 1rem;
   background-color:rgb(32 72 113);
   color: rgb(32 72 113)#3498db;
+ 
+}
+
+.inicio{
+  color: #fff;
+  border: #fff solid;
+  background-color:rgb(32 72 113) ;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  vertical-align: middle;
 }
 
-.login-button{
-  border: #fff solid;
+.inicio:hover {
+  background-color: #2980b9;
+  color: #fff;
 }
 
-.login-button button:hover {
-
+.inicio2{
+  border: none;
+  color: rgb(33, 75, 116);
+  background-color:rgb(204, 211, 219) ;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.inicio2:hover {
   background-color: #2980b9;
   color: #fff;
 }
 
 
+.social-icons {
+  display: flex;
+  margin-left: 45rem;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 50px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #2980b9; /* Color de resaltado de WhatsApp */
+}

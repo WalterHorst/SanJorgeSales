@@ -12,9 +12,11 @@
   }
 
   .signup-button {
-    align-self: flex-start;
-    font-size: 1.5em; 
-    padding: 10px 20px;
-  
+    background-color:rgb(32 72 113);;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   }
   
