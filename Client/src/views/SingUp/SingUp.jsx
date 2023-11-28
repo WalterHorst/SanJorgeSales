@@ -5,8 +5,10 @@ import { NavLink } from "react-router-dom";
 const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [localidad, setLocalidad] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleLogin = async () => {};
+  const handleSingUp = async () => {};
 
   return (
     <div className="padreSingUp">
@@ -25,24 +27,6 @@ const Login = (props) => {
             <br />
             <input
               className="input-SingUp"
-              type="text"
-              placeholder="Nombre de usuario"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              className="input-SingUp"
-              type="text"
-              placeholder="Nombre de usuario"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              className="input-SingUp"
               type="password"
               placeholder="Contraseña"
               value={password}
@@ -50,8 +34,26 @@ const Login = (props) => {
             />
             <br />
             <br />
+            <input
+              className="input-SingUp"
+              type="text"
+              placeholder="Localidad"
+              value={localidad}
+              onChange={(e) => setLocalidad(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              className="input-SingUp"
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <br />
+            <br />
             <button 
-            className="Registrarme" type="button" onClick={handleLogin}>
+            className="Registrarme" type="button" onClick={handleSingUp}>
               Registrarme
             </button>
           </form>
