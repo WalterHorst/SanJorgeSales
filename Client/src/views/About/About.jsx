@@ -3,9 +3,9 @@ import "./About.css";
 const About = () => {
   return (
     <div className="about">
-      <h1>Bienvenido a SanJorgeSales</h1>
+      <h1>Bienvenido a Kymoon</h1>
       <p>
-        En SanJorgeSales, estamos comprometidos a proporcionar una plataforma
+        En Kymoon, estamos comprometidos a proporcionar una plataforma
         única para vendedores y compradores. Somos más que un simple mercado en
         línea; somos un espacio donde las tiendas pueden destacar, vender sus
         productos y construir una presencia en línea exitosa.
@@ -33,7 +33,7 @@ const About = () => {
       </ul>
       <h2>Únete a nosotros y vende con confianza</h2>
       <p>
-        ¿Quieres formar parte de nuestra comunidad? Únete a SanJorgeSales hoy
+        ¿Quieres formar parte de nuestra comunidad? Únete a Kymoon hoy
         mismo y descubre el potencial de crecimiento para tu negocio. ¡Estamos
         emocionados de acompañarte en tu viaje hacia el éxito!
       </p>

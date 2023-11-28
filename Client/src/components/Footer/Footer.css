@@ -1,13 +1,11 @@
-/* Footer Styles */
-
 .footer {
+  padding: 0.5rem;
   width: 100%;
   position: absolute;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(32 72 113); 
-  color: #fff; 
- 
+  background-color: rgb(32 72 113);
+  color: #fff;
 }
 
 .footer div {
@@ -21,18 +19,16 @@
 }
 
 .footer a {
-  color: #fff; /* Cambia el color de los enlaces según tu preferencia */
+  color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
 }
 
 .footer h4 {
-  color: #fff; /* Cambia el color del título según tu preferencia */
+  color: #fff;
 }
 
 .copyrigth {
   margin-top: 20px;
   text-align: center;
 }
-
-/* Añade estilos adicionales según sea necesario */

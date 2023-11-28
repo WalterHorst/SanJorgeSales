@@ -85,8 +85,8 @@ const NavBar = () => {
           <img className="logo" src={logo} alt="Logo"></img>
         </NavLink>
       </div>
-      <div className="About">
-        <NavLink to="/about">About</NavLink>
+      <div>
+        <NavLink  className="About" to="/about">About</NavLink>
       </div>
       <div className="categories-selector">
         <select>
