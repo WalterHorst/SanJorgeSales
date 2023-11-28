@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 import logo from "../../assets/Imagenes/Logo.png";
+import BurgerBtn from "../BurgerBtn/BurgerBtn";
 
 const NavBar = () => {
   return (
@@ -37,6 +38,9 @@ const NavBar = () => {
         <NavLink to={"registro"}>
           <button className="inicio2">Crear cuenta</button>
         </NavLink>
+      </div>
+      <div className="burgerBtnNav">
+        <BurgerBtn></BurgerBtn>
       </div>
     </div>
   );

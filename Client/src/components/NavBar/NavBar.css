@@ -78,3 +78,21 @@ border-radius: 0;
 .social-icons a:hover {
   color: #2980b9; /* Color de resaltado de WhatsApp */
 }
+
+
+.burgerBtnNav {
+  margin-right: 1rem;
+  display: none; /* Ocultar por defecto en pantallas no móviles */
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px (puedes ajustar este valor según tus necesidades) */
+@media only screen and (max-width: 768px) {
+  .social-icons,
+  .login-button-container {
+    display: none; /* Ocultar los íconos sociales y el contenedor de inicio de sesión en dispositivos móviles */
+  }
+
+  .burgerBtnNav {
+    display: block; /* Mostrar el contenedor del botón Burger en dispositivos móviles */
+  }
+}
