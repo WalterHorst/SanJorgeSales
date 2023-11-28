@@ -5,6 +5,8 @@ import FirstPage from "../../components/FirstPage/FirstPage";
 import SecondPage from "../../components/secondPage/SecondPage";
 import ThirdPage from "../../components/ThirdPage/ThirdPage";
 import FourtPage from "../../components/FourtPage/FourtPage";
+import FifthPage from "../../components/FifthPage/FifthPage";
+
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
         <SecondPage></SecondPage>
         <ThirdPage></ThirdPage>
         <FourtPage></FourtPage>
+        <FifthPage></FifthPage>
+
       </div>
     </div>
   );
