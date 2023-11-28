@@ -21,7 +21,11 @@ const FourtPage = () => {
           </h2>
         </div>
       </div>
-      <h1>Una gran cantidad de comerciantes eligieron confiar en nosotros.</h1>
+      <div className="paraCentrar">
+        <h1>
+          Una gran cantidad de comerciantes eligieron confiar en nosotros.
+        </h1>
+      </div>
     </div>
   );
 };
