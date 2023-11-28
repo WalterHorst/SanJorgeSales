@@ -8,7 +8,7 @@ const Login = (props) => {
   const [localidad, setLocalidad] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleLogin = async () => {};
+  const handleSingUp = async () => {};
 
   return (
     <div className="padreSingUp">
@@ -53,7 +53,7 @@ const Login = (props) => {
             <br />
             <br />
             <button 
-            className="Registrarme" type="button" onClick={handleLogin}>
+            className="Registrarme" type="button" onClick={handleSingUp}>
               Registrarme
             </button>
           </form>
