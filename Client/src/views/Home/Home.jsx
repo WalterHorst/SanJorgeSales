@@ -1,9 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Carrusel from "../../components/Carrusel/Carrusel";
-import FirstPage from "../../components/firstPage/firstPage";
+import FirstPage from "../../components/FirstPage/FirstPage";
 import SecondPage from "../../components/secondPage/SecondPage";
-
+import ThirdPage from "../../components/ThirdPage/ThirdPage";
 import FourtPage from "../../components/FourtPage/FourtPage";
 
 const Home = () => {
@@ -12,8 +12,9 @@ const Home = () => {
       <div className="home-container">
         <Carrusel></Carrusel>
         <FirstPage></FirstPage>
-        <SecondPage></SecondPage>
-        <FourtPage></FourtPage>
+        <SecondPage></SecondPage
+        <ThirdPage></ThirdPage>
+        <FourtPage></FourtPage
       </div>
     </div>
   );
