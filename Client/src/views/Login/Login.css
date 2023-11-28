@@ -1,47 +1,69 @@
-.padreLogin{
+
+.padreLogin {
+  min-height: 100vh;
+  margin-top: 0.1rem;
+  position: relative;
+  padding-bottom: 3em;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
+  height: 100vh;
+  width:100vw;
 }
-
 
 .login-container {
-  background-color: #f0f8ff; 
-  padding: 20px;
+  background-color: #fdfdfd;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  margin: auto;
-}
-
-.h2-login {
-  color: #1e90ff; 
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #4169e1; 
-}
-
-input {
+  box-shadow: 0 0 10px rgba(8, 2, 2, 20);
+  max-width: 300px; 
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #1e90ff;
-  border-radius: 4px;
+  margin: auto;
+  height: 20rem;
 }
 
-button {
-  background-color : #204871;
+.login {
+color:rgb(32 72 113);
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-login {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(32 72 113);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  color:rgb(32 72 113);
+}
+
+.Btn-login {
+  background-color:rgb(32 72 113);;
+  color: #fff;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
 }
 
-button:hover {
-  background-color: #007acc; 
+.Btn-login:hover {
+  background-color: #007acc;
+}
+
+.divparrafo{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnregistro{
+  background-color:rgb(32 72 113);;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 2.5rem;
 }
