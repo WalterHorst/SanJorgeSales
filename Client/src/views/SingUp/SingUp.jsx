@@ -12,9 +12,10 @@ const Login = (props) => {
 
   return (
     <div className="padreSingUp">
+      <div className="bluebox">
       <div className="SingUp-container">
         <>
-          <h2 className="login">Ingresa a tu cuenta</h2>
+          <h2 className="login">Crea tu cuenta</h2>
           <form>
             <input
               className="input-SingUp"
@@ -70,6 +71,7 @@ const Login = (props) => {
             <button className="iniciarsesion" >Inicia sesión</button>
           </NavLink>
         </div>
+      </div>
       </div>
     </div>
   );
