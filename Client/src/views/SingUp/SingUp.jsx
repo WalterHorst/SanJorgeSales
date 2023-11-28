@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [localidad, setLocalidad] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleLogin = async () => {};
 
@@ -25,28 +27,28 @@ const Login = (props) => {
             <br />
             <input
               className="input-SingUp"
-              type="text"
-              placeholder="Nombre de usuario"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              className="input-SingUp"
-              type="text"
-              placeholder="Nombre de usuario"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              className="input-SingUp"
               type="password"
               placeholder="Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              className="input-SingUp"
+              type="text"
+              placeholder="Localidad"
+              value={localidad}
+              onChange={(e) => setLocalidad(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              className="input-SingUp"
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <br />
             <br />
