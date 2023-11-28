@@ -10,6 +10,7 @@ const Login = (props) => {
 
   return (
     <div className="padreLogin">
+      <div className="bluebox">
       <div className="login-container">
         <>
           <h2 className="login">Ingresa a tu cuenta</h2>
@@ -50,6 +51,7 @@ const Login = (props) => {
             <button className="btnregistro" >Registrate</button>
           </NavLink>
         </div>
+      </div>
       </div>
     </div>
   );
