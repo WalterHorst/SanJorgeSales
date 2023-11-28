@@ -1,5 +1,4 @@
 .footer {
-  padding: 0.5rem;
   width: 100%;
   position: absolute;
   display: flex;
@@ -32,3 +31,5 @@
   margin-top: 20px;
   text-align: center;
 }
+
+

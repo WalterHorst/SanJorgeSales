@@ -13,3 +13,9 @@ button {
   background-color : #204871;
   color: white;
 }
+ html{
+  min-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+ }
