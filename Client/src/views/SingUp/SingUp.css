@@ -1,17 +1,24 @@
 
-.padreLogin {
-    min-height: 100vh;
-    margin-top: 0.1rem;
-    position: relative;
-    padding-bottom: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width:100vw;
-  }
-  
-  .login-container {
+.padreSingUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bluebox {
+  border: 2px solid #001f3f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  height: 70%;
+  display: flex; /* Añadido */
+  align-items: center; /* Añadido */
+  background-color: #001f3f;
+}
+
+.SingUp-container {
     background-color: #fdfdfd;
     padding: 30px;
     border-radius: 8px;
@@ -19,18 +26,14 @@
     max-width: 300px; 
     width: 100%;
     margin: auto;
-    height: 25rem;
-  }
-  
-  .login {
-  color:rgb(32 72 113);
+    height: 30rem;
   }
   
   .input-container {
     margin-bottom: 15px;
   }
   
-  .input-login {
+  .input-SingUp {
     width: 100%;
     padding: 10px;
     border: 1px solid rgb(32 72 113);
@@ -40,7 +43,7 @@
     color:rgb(32 72 113);
   }
   
-  .Btn-login {
+  .Registrarme {
     background-color:rgb(32 72 113);;
     color: #fff;
     padding: 10px 15px;
@@ -50,7 +53,7 @@
     width: 100%;
   }
   
-  .Btn-login:hover {
+  .Registrarme:hover {
     background-color: #007acc;
   }
   
@@ -59,7 +62,7 @@
     justify-content: space-around;
   }
   
-  .btnregistro{
+  .iniciarsesion{
     background-color:rgb(32 72 113);;
     color: #fff;
     border: none;
