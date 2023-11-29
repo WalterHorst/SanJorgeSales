@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const NavBar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(isModalOpen);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -58,15 +58,42 @@ const NavBar = () => {
         <BurgerBtn showModal={showModal}></BurgerBtn>
       </div>
       <Modal
-        title="Basic Modal"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
+        footer={null}
       >
-        <h1>IG</h1>
-        <h1>WAPP</h1>
-        <h1>Inicio</h1>
-        <h1>Registrarse</h1>
+        <div className="modalContainer">
+          <div className="modalIcons">
+            <a href="mailto:TUCORREO@DOMINIO.COM">
+              <FaEnvelope />
+            </a>
+            <a
+              href="https://www.instagram.com/TUINSTAGRAM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://wa.me/TUNUMERODETELEFONO"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
+          <NavLink to="/login">
+            <button className="inicio" onClick={handleCancel}>
+              Iniciar Sesión
+            </button>
+          </NavLink>
+          <NavLink to={"registro"}>
+            <button className="inicio2" onClick={handleCancel}>
+              Crear cuenta
+            </button>
+          </NavLink>
+        </div>
       </Modal>
     </div>
   );
