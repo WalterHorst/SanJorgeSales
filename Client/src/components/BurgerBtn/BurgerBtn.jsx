@@ -1,12 +1,18 @@
 import "./BurgerBtn.css";
-const BurgerBtn = () => {
+import { Button } from "antd";
+const BurgerBtn = ({ showModal }) => {
   return (
-    <label class="burger" for="burger">
+    <Button
+      type="primary"
+      htmlFor="burger"
+      className="burger"
+      onClick={showModal}
+    >
       <input type="checkbox" id="burger" />
       <span></span>
       <span></span>
       <span></span>
-    </label>
+    </Button>
   );
 };
 export default BurgerBtn;
