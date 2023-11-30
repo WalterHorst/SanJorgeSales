@@ -6,6 +6,7 @@ import Login from "./views/Login/Login";
 import Footer from "./components/Footer/Footer";
 import About from "./views/About/About";
 import SignUp from "./views/SingUp/SingUp";
+import Store from "./views/Store/Store";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/registro" element={<SignUp></SignUp>}></Route>
+          <Route path="/store" element={<Store></Store>}></Route>
         </Routes>
         <Footer />
       </div>

@@ -1,0 +1,56 @@
+.profile-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-top: 0.1rem;
+    position: relative;
+    padding-bottom: 3em;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .cover-photo {
+    height: 200px;
+    background-color: #eee;
+    border-radius: 8px;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat
+
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px; /* Ajusta según sea necesario */
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-size: cover; 
+  }
+  
+  items-for-sale {
+    margin-top: 20px;
+  }
+  
+  items-for-sale h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  items-for-sale ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  items-for-sale li {
+    margin-bottom: 8px;
+  }
+  
