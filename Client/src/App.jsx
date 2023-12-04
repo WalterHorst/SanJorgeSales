@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./views/About/About";
 import SignUp from "./views/SingUp/SingUp";
 import AdminPanel from "./components/AdminBoard/AdminBoard"
+import Tienda from "./views/Tienda/Tienda"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/registro" element={<SignUp></SignUp>}></Route>
           <Route path="/admin" element={<AdminPanel></AdminPanel>}></Route>
+          <Route path="/tienda" element={<Tienda></Tienda>}></Route>
         </Routes>
         <Footer />
       </div>
