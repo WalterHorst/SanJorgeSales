@@ -1,0 +1,64 @@
+/* ModalProduct.css */
+
+.ant-modal-content {
+    background-color: #fff; /* Fondo blanco */
+  }
+  
+  .ant-modal-header {
+    background-color: rgb(32, 72, 113); /* Fondo azul */
+    color: #fff; /* Texto blanco */
+  }
+  
+  .ant-modal-title {
+    color: #fff; /* Texto blanco */
+  }
+  
+  .ant-form-item-label {
+    color: rgb(32, 72, 113); /* Texto azul */
+  }
+  
+  .ant-form-item-required::before {
+    display: none; /* Ocultar el asterisco rojo de los campos requeridos */
+  }
+  
+  .ant-modal-footer {
+    background-color: #f0f2f5; /* Fondo gris claro para el pie del modal */
+  }
+  
+  /* Estilo para el botón "Agregar" */
+  .ant-btn-primary {
+    background-color: rgb(32, 72, 113); /* Fondo azul */
+    border-color: rgb(32, 72, 113); /* Borde azul */
+    color: #fff; /* Texto blanco */
+  }
+  
+  /* Estilo para el botón "Cancelar" */
+  .ant-btn-default {
+    color: rgb(32, 72, 113); /* Texto azul */
+  }
+  
+  /* Estilo para el botón de subir imagen */
+  .ant-upload-list-picture-card-container {
+    border: 1px dashed rgb(32, 72, 113); /* Borde punteado azul para el área de subida de la imagen */
+  }
+  
+  /* Cambia el color del icono de subir imagen */
+  .ant-upload-select-picture-card i {
+    color: rgb(32, 72, 113); /* Icono de subir imagen azul */
+  }
+  
+  /* Cambia el color del borde del icono de subir imagen */
+  .ant-upload-select-picture-card i:hover {
+    border-color: rgb(32, 72, 113); /* Borde azul al pasar el ratón sobre el icono */
+  }
+  
+  /* Cambia el color del botón de subir imagen */
+  .ant-upload-select-picture-card {
+    border-color: rgb(32, 72, 113); /* Borde azul */
+  }
+  
+  /* Cambia el color del botón de subir imagen al pasar el ratón */
+  .ant-upload-select-picture-card:hover {
+    border-color: rgb(32, 72, 113); /* Borde azul al pasar el ratón sobre el botón */
+  }
+  
