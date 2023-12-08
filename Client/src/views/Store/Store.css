@@ -1,11 +1,10 @@
 .profile-container {
-  text-align: center;
-  min-height: 80vh;
-  min-width: 80vw;
-  margin-top: 1rem;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-top: 0.1rem;
   position: relative;
-  padding-bottom: 3em;
-  padding: 20px;
+  padding-bottom: 3em; 
+  text-align: center;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f5f5f5;
@@ -13,12 +12,13 @@
 
 .cover-photo {
   height: 27vh;
-  background-color: rgb(32 72 113);
+  background-color: rgba(65, 61, 61, 0.151);
   border-radius: 8px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   image-rendering: smooth;
+  
 }
 
 .profile-details {
@@ -32,17 +32,19 @@
 .profile-picture {
   width: 15vw;
   height: 20vh;
-  background-color: #fff;
+  background-color: rgba(65, 61, 61, 0.151);
   border-radius: 5%;
   margin-bottom: 10px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border: 4px solid rgb(32 72 113);
   image-rendering: smooth;
 }
 
 .items-for-sale {
-  margin-top: -60%;
-  margin-left: 40%;
+  margin-top: -50%;
+  margin-left: 25%;
   /* display: inline-flex; */
   text-align: center;
   align-items: center;
@@ -167,3 +169,28 @@
 
 }
 
+
+.edit-store-button {
+  font-size: 20px;
+  color: #fff9f9;
+  padding: 0;
+  margin: 0;
+}
+
+.botonSetting {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+.plus-button {
+margin-top: 40px;
+ margin-bottom: 1.3rem;
+ margin-right: 1000px;
+  background-color: transparent;
+  border: none;
+}
