@@ -1,0 +1,32 @@
+.productos-container {
+    padding: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .filter-bar {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .productos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .producto-card {
+    width: 300px;
+    margin-bottom: 16px;
+  }
+
+  .super-product{
+    
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-top: 0.1rem;
+  position: relative;
+  padding-bottom: 3em; 
+  }
