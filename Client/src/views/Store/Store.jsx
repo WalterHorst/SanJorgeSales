@@ -50,6 +50,7 @@ const Store = () => {
 
   return (
     <div className="profile-container">
+
       <Button type="primary" onClick={handleEditClick} style={{ margin: '10px' }}>
         Editar Tienda
       </Button>
@@ -60,6 +61,7 @@ const Store = () => {
         onUpdate={handleEditUpdate}
         initialData={storeData}
       />
+
       <div
         className="cover-photo"
         style={{ backgroundImage: `url(${storeData.coverPhotoUrl})` }}
