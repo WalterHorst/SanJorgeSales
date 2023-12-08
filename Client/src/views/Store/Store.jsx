@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import "./Store.css";
 import { Button } from "antd";
 import ModalForm from "../../components/ModalProduct/ModalProduct";
+import EditStoreModal from "../../components/ModalStore/ModalStore";
 
 const Store = () => {
-  const [coverPhotoUrl, setCoverPhotoUrl] = useState("");
-  const [profilePictureUrl, setProfilePictureUrl] = useState("");
-  const [sellerName, setSellerName] = useState("");
-  const [sellerLocation, setSellerLocation] = useState("");
-  // const [productName, setProductName] = useState("");
-  // const [productPrice, setProductPrice] = useState("");
-  // const [productImage, setProductImage] = useState(""); // Nuevo estado para la URL de la imagen
   const [productList, setProductList] = useState([]);
   const [visible, setVisible] = useState(false);
+  const [editModalVisible, setEditModalVisible] = useState(false);
+  const [storeData, setStoreData] = useState({
+    coverPhotoUrl: "URL1",
+    profilePictureUrl: "URL2",
+    sellerName: "Vendedor",
+    sellerLocation: "Ubicación",
+  });
 
   const showModal = () => {
     setVisible(true);
@@ -29,64 +30,49 @@ const Store = () => {
     setVisible(false);
   };
 
-  // const handleAddProduct = () => {
-  //   const newProduct = {
-  //     name: productName,
-  //     price: productPrice,
-  //     image: productImage, // Agregar la URL de la imagen al objeto del producto
-  //   };
-
-  //   setProductList([...productList, newProduct]);
-  //   setProductName("");
-  //   setProductPrice("");
-  //   setProductImage(""); // Limpiar la URL de la imagen después de agregar el producto
-  // };
-
   const handleBuyProduct = (product) => {
     // Lógica para la compra del producto
     console.log(`Comprando ${product.name} por ${product.price}`);
   };
 
+  const handleEditClick = () => {
+    setEditModalVisible(true);
+  };
+
+  const handleEditCancel = () => {
+    setEditModalVisible(false);
+  };
+
+  const handleEditUpdate = (values) => {
+    setStoreData(values);
+    setEditModalVisible(false);
+  };
+
   return (
     <div className="profile-container">
-      {/* <h3>Datos de tu tienda</h3>
-      <div className="user-inputs">
-        <input
-          type="text"
-          placeholder="URL de la portada"
-          value={coverPhotoUrl}
-          onChange={(e) => setCoverPhotoUrl(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="URL de la foto de perfil"
-          value={profilePictureUrl}
-          onChange={(e) => setProfilePictureUrl(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Nombre del Vendedor"
-          value={sellerName}
-          onChange={(e) => setSellerName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Ubicación del Vendedor"
-          value={sellerLocation}
-          onChange={(e) => setSellerLocation(e.target.value)}
-        />
-      </div> */}
+
+      <Button type="primary" onClick={handleEditClick} style={{ margin: '10px' }}>
+        Editar Tienda
+      </Button>
+
+      <EditStoreModal 
+        visible={editModalVisible}
+        onCancel={handleEditCancel}
+        onUpdate={handleEditUpdate}
+        initialData={storeData}
+      />
+
       <div
         className="cover-photo"
-        style={{ backgroundImage: `url(${coverPhotoUrl})` }}
+        style={{ backgroundImage: `url(${storeData.coverPhotoUrl})` }}
       ></div>
       <div className="profile-details">
         <div
           className="profile-picture"
-          style={{ backgroundImage: `url(${profilePictureUrl})` }}
+          style={{ backgroundImage: `url(${storeData.profilePictureUrl})` }}
         ></div>
-        <h2>{sellerName}</h2>
-        <p>{sellerLocation}</p>
+        <h2>{storeData.sellerName}</h2>
+        <p>{storeData.sellerLocation}</p>
       </div>
       <div className="items-for-sale">
         <h3>Productos en Venta</h3>
@@ -124,32 +110,6 @@ const Store = () => {
           onCreate={handleCreate}
         />
       </div>
-      {/* <div className="user-inputs">
-        <input
-          type="text"
-          placeholder="URL de la imagen del producto"
-          value={productImage}
-          onChange={(e) => setProductImage(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Nombre del Producto"
-          value={productName}
-          onChange={(e) => setProductName(e.target.value)}
-        />
-        <input
-          type="text"
-
-          placeholder="Precio del Producto"
-          value={productPrice}
-          onChange={(e) => setProductPrice(e.target.value)}
-        />
-      </div>
-        <button className="agregar-button" onClick={handleAddProduct}>Agregar</button>
-    <div className="submit-store">
-        <button className="agregar-button" onClick={handleAddProduct}>volver</button>
-        <button className="agregar-button" onClick={handleAddProduct}>guardar cambios</button>
-    </div> */}
     </div>
   );
 };
