@@ -1,10 +1,8 @@
-// Importa los componentes necesarios de Ant Design y React
 import React, { useState } from "react";
 import { Modal, Form, Input, Upload, Button } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import "./ModalProduct.css"
+import "./ModalProduct.css";
 
-// Componente ModalForm para crear productos
 const ModalForm = ({ visible, onCancel, onCreate }) => {
   const [form] = Form.useForm();
 
@@ -26,7 +24,12 @@ const ModalForm = ({ visible, onCancel, onCreate }) => {
         <Form.Item
           name="name"
           label="Nombre del Producto"
-          rules={[{ required: true, message: "Por favor ingrese el nombre del producto" }]}
+          rules={[
+            {
+              required: true,
+              message: "Por favor ingrese el nombre del producto",
+            },
+          ]}
         >
           <Input />
         </Form.Item>
@@ -34,7 +37,12 @@ const ModalForm = ({ visible, onCancel, onCreate }) => {
         <Form.Item
           name="price"
           label="Precio del Producto"
-          rules={[{ required: true, message: "Por favor ingrese el precio del producto" }]}
+          rules={[
+            {
+              required: true,
+              message: "Por favor ingrese el precio del producto",
+            },
+          ]}
         >
           <Input type="number" />
         </Form.Item>
@@ -42,7 +50,12 @@ const ModalForm = ({ visible, onCancel, onCreate }) => {
         <Form.Item
           name="description"
           label="Descripción del Producto"
-          rules={[{ required: true, message: "Por favor ingrese la descripción del producto" }]}
+          rules={[
+            {
+              required: true,
+              message: "Por favor ingrese la descripción del producto",
+            },
+          ]}
         >
           <Input.TextArea />
         </Form.Item>
@@ -51,7 +64,12 @@ const ModalForm = ({ visible, onCancel, onCreate }) => {
           name="image"
           label="Imagen del Producto"
           valuePropName="fileList"
-          getValueFromEvent={(e) => e.fileList}
+          getValueFromEvent={(e) =>
+            e.fileList.map((file) => ({
+              ...file,
+              preview: URL.createObjectURL(file.originFileObj),
+            }))
+          }
         >
           <Upload name="logo" action="/upload.do" listType="picture">
             <Button icon={<UploadOutlined />}>Subir Imagen</Button>

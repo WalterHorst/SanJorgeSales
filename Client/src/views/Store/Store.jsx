@@ -8,7 +8,6 @@
 //   const [sellerLocation, setSellerLocation] = useState("");
 //   const [itemsForSale, setItemsForSale] = useState([]);
 
-
 //   const handleAddItem = (item) => {
 //     setItemsForSale([...itemsForSale, item]);
 //   };
@@ -108,8 +107,6 @@ const Store = () => {
     setVisible(false);
   };
 
-  
-
   // const handleAddProduct = () => {
   //   const newProduct = {
   //     name: productName,
@@ -122,7 +119,6 @@ const Store = () => {
   //   setProductPrice("");
   //   setProductImage(""); // Limpiar la URL de la imagen después de agregar el producto
   // };
-
 
   const handleBuyProduct = (product) => {
     // Lógica para la compra del producto
@@ -176,8 +172,7 @@ const Store = () => {
           {productList.map((product, index) => (
             <li key={index} className="product-card">
               <img
-                src={product.image} 
-
+                src={product.image ? product.image[0].preview : ""}
                 alt={product.name}
                 className="product-image"
               />
@@ -187,9 +182,7 @@ const Store = () => {
               </div>
               <div className="product-actions">
                 <button onClick={() => handleBuyProduct(product)}>
-
                   comprar
-
                 </button>
               </div>
             </li>
@@ -198,12 +191,16 @@ const Store = () => {
       </div>
 
       <div>
-      <Button type="primary" onClick={showModal}>
-        Agregar Producto
-      </Button>
-      <ModalForm visible={visible} onCancel={handleCancel} onCreate={handleCreate} />
-    </div>
-{/* <div className="user-inputs">
+        <Button type="primary" onClick={showModal}>
+          Agregar Producto
+        </Button>
+        <ModalForm
+          visible={visible}
+          onCancel={handleCancel}
+          onCreate={handleCreate}
+        />
+      </div>
+      {/* <div className="user-inputs">
         <input
           type="text"
           placeholder="URL de la imagen del producto"
@@ -231,11 +228,8 @@ const Store = () => {
 
 
     </div> */}
-
     </div>
   );
 };
 
 export default Store;
-
-
