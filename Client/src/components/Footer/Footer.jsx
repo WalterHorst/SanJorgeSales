@@ -47,9 +47,9 @@ const Footer = () => {
           <a href="/vende">Más información</a>
         </p>
       </div>
-      <div className="copyrigth">
+      {/* <div className="copyrigth">
         <p>&copy; 2023 SanJorgeSales </p>
-      </div>
+      </div> */}
     </footer>
   );
 };
