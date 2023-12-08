@@ -1,0 +1,62 @@
+
+.ant-modal-content {
+    background-color: #fff; 
+  }
+  
+  .ant-modal-header {
+    background-color: rgb(32, 72, 113);
+    color: #fff; 
+  }
+  
+  .ant-modal-title {
+    color: #fff;
+  }
+  
+  .ant-form-item-label {
+    color: rgb(32, 72, 113); 
+  }
+  
+  .ant-form-item-required::before {
+    display: none; 
+  }
+  
+  .ant-modal-footer {
+    background-color: #f0f2f5; 
+  }
+  
+
+  .ant-btn-primary {
+    background-color: rgb(32, 72, 113); 
+    border-color: rgb(32, 72, 113); 
+    color: #fff; 
+  }
+  
+  
+  .ant-btn-default {
+    color: rgb(32, 72, 113); 
+  }
+  
+ 
+  .ant-upload-list-picture-card-container {
+    border: 1px dashed rgb(32, 72, 113); 
+  }
+  
+
+  .ant-upload-select-picture-card i {
+    color: rgb(32, 72, 113); 
+  }
+  
+
+  .ant-upload-select-picture-card i:hover {
+    border-color: rgb(32, 72, 113); 
+  }
+
+  .ant-upload-select-picture-card {
+    border-color: rgb(32, 72, 113); 
+  }
+  
+ 
+  .ant-upload-select-picture-card:hover {
+    border-color: rgb(32, 72, 113); 
+  }
+  

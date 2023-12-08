@@ -79,31 +79,50 @@
 
 import React, { useState } from "react";
 import "./Store.css";
+import { Button } from "antd";
+import ModalForm from "../../components/ModalProduct/ModalProduct";
 
 const Store = () => {
   const [coverPhotoUrl, setCoverPhotoUrl] = useState("");
   const [profilePictureUrl, setProfilePictureUrl] = useState("");
   const [sellerName, setSellerName] = useState("");
   const [sellerLocation, setSellerLocation] = useState("");
-  const [productName, setProductName] = useState("");
-  const [productPrice, setProductPrice] = useState("");
-  const [productImage, setProductImage] = useState(""); // Nuevo estado para la URL de la imagen
+  // const [productName, setProductName] = useState("");
+  // const [productPrice, setProductPrice] = useState("");
+  // const [productImage, setProductImage] = useState(""); // Nuevo estado para la URL de la imagen
   const [productList, setProductList] = useState([]);
+  const [visible, setVisible] = useState(false);
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
+  };
+
+  const handleCreate = (values) => {
+    console.log("Received values:", values);
+    setProductList([...productList, values]);
+    // Aquí puedes realizar la lógica para enviar los datos del formulario al backend
+    setVisible(false);
+  };
 
   
 
-  const handleAddProduct = () => {
-    const newProduct = {
-      name: productName,
-      price: productPrice,
-      image: productImage, // Agregar la URL de la imagen al objeto del producto
-    };
+  // const handleAddProduct = () => {
+  //   const newProduct = {
+  //     name: productName,
+  //     price: productPrice,
+  //     image: productImage, // Agregar la URL de la imagen al objeto del producto
+  //   };
 
-    setProductList([...productList, newProduct]);
-    setProductName("");
-    setProductPrice("");
-    setProductImage(""); // Limpiar la URL de la imagen después de agregar el producto
-  };
+  //   setProductList([...productList, newProduct]);
+  //   setProductName("");
+  //   setProductPrice("");
+  //   setProductImage(""); // Limpiar la URL de la imagen después de agregar el producto
+  // };
+
 
   const handleBuyProduct = (product) => {
     // Lógica para la compra del producto
@@ -157,7 +176,8 @@ const Store = () => {
           {productList.map((product, index) => (
             <li key={index} className="product-card">
               <img
-                src={product.image} // Usar la URL de la imagen del producto
+                src={product.image} 
+
                 alt={product.name}
                 className="product-image"
               />
@@ -167,18 +187,23 @@ const Store = () => {
               </div>
               <div className="product-actions">
                 <button onClick={() => handleBuyProduct(product)}>
-                  Modificar
-                </button>
-                <button onClick={() => handleBuyProduct(product)}>
-                  Eliminar
+
+                  comprar
+
                 </button>
               </div>
             </li>
           ))}
         </ul>
       </div>
-      <h3>Nuevo Producto</h3>
-      <div className="user-inputs">
+
+      <div>
+      <Button type="primary" onClick={showModal}>
+        Agregar Producto
+      </Button>
+      <ModalForm visible={visible} onCancel={handleCancel} onCreate={handleCreate} />
+    </div>
+{/* <div className="user-inputs">
         <input
           type="text"
           placeholder="URL de la imagen del producto"
@@ -193,6 +218,7 @@ const Store = () => {
         />
         <input
           type="text"
+
           placeholder="Precio del Producto"
           value={productPrice}
           onChange={(e) => setProductPrice(e.target.value)}
@@ -203,9 +229,13 @@ const Store = () => {
         <button className="agregar-button" onClick={handleAddProduct}>volver</button>
         <button className="agregar-button" onClick={handleAddProduct}>guardar cambios</button>
 
-    </div>
+
+    </div> */}
+
     </div>
   );
 };
 
 export default Store;
+
+
