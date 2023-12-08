@@ -127,7 +127,7 @@ const Store = () => {
 
   return (
     <div className="profile-container">
-      <h3>Datos de tu tienda</h3>
+      {/* <h3>Datos de tu tienda</h3>
       <div className="user-inputs">
         <input
           type="text"
@@ -153,7 +153,7 @@ const Store = () => {
           value={sellerLocation}
           onChange={(e) => setSellerLocation(e.target.value)}
         />
-      </div>
+      </div> */}
       <div
         className="cover-photo"
         style={{ backgroundImage: `url(${coverPhotoUrl})` }}
