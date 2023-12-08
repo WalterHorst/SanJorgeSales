@@ -123,6 +123,7 @@ const Store = () => {
   //   setProductImage(""); // Limpiar la URL de la imagen después de agregar el producto
   // };
 
+
   const handleBuyProduct = (product) => {
     // Lógica para la compra del producto
     console.log(`Comprando ${product.name} por ${product.price}`);
@@ -176,6 +177,7 @@ const Store = () => {
             <li key={index} className="product-card">
               <img
                 src={product.image} 
+
                 alt={product.name}
                 className="product-image"
               />
@@ -185,13 +187,16 @@ const Store = () => {
               </div>
               <div className="product-actions">
                 <button onClick={() => handleBuyProduct(product)}>
+
                   comprar
+
                 </button>
               </div>
             </li>
           ))}
         </ul>
       </div>
+
       <div>
       <Button type="primary" onClick={showModal}>
         Agregar Producto
@@ -213,6 +218,7 @@ const Store = () => {
         />
         <input
           type="text"
+
           placeholder="Precio del Producto"
           value={productPrice}
           onChange={(e) => setProductPrice(e.target.value)}
@@ -223,7 +229,9 @@ const Store = () => {
         <button className="agregar-button" onClick={handleAddProduct}>volver</button>
         <button className="agregar-button" onClick={handleAddProduct}>guardar cambios</button>
 
+
     </div> */}
+
     </div>
   );
 };
