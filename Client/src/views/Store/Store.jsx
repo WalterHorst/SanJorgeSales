@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { SettingOutlined, PlusOutlined } from "@ant-design/icons";
 import "./Store.css";
 import { Button } from "antd";
 import ModalForm from "../../components/ModalProduct/ModalProduct";
@@ -6,13 +7,16 @@ import EditStoreModal from "../../components/ModalStore/ModalStore";
 
 const Store = () => {
   const [productList, setProductList] = useState([]);
+
   const [visible, setVisible] = useState(false);
   const [editModalVisible, setEditModalVisible] = useState(false);
   const [storeData, setStoreData] = useState({
-    coverPhotoUrl: "URL1",
-    profilePictureUrl: "URL2",
-    sellerName: "Vendedor",
-    sellerLocation: "Ubicación",
+    coverPhotoUrl:
+      "https://cdn.icon-icons.com/icons2/1856/PNG/512/add-photo-alternate_116693.png",
+    profilePictureUrl:
+      "https://cdn.icon-icons.com/icons2/1856/PNG/512/add-photo-alternate_116693.png",
+    sellerName: "",
+    sellerLocation: "",
   });
 
   const showModal = () => {
@@ -50,12 +54,7 @@ const Store = () => {
 
   return (
     <div className="profile-container">
-
-      <Button type="primary" onClick={handleEditClick} style={{ margin: '10px' }}>
-        Editar Tienda
-      </Button>
-
-      <EditStoreModal 
+      <EditStoreModal
         visible={editModalVisible}
         onCancel={handleEditCancel}
         onUpdate={handleEditUpdate}
@@ -65,23 +64,41 @@ const Store = () => {
       <div
         className="cover-photo"
         style={{ backgroundImage: `url(${storeData.coverPhotoUrl})` }}
-      ></div>
+      >
+        <Button
+          type="primary"
+          onClick={handleEditClick}
+          className="botonSetting"
+        >
+          <SettingOutlined className="edit-store-button" />
+        </Button>
+      </div>
       <div className="profile-details">
         <div
           className="profile-picture"
           style={{ backgroundImage: `url(${storeData.profilePictureUrl})` }}
         ></div>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerName}</h2>
-        <h2>{storeData.sellerLocation}</h2>
+        <h2>{storeData.sellerName || "Tienda generica"}</h2>
+        <h2>{storeData.sellerLocation || "Ubicacion: En tu corazon"}</h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
       </div>
       <div className="items-for-sale">
-        <ul >
+        <ul>
+          <div>
+            <Button type="primary" onClick={showModal} className="plus-button">
+              <PlusOutlined />
+            </Button>
+            <ModalForm
+              visible={visible}
+              onCancel={handleCancel}
+              onCreate={handleCreate}
+            />
+          </div>
           <div className="product-container">
             {productList.map((product, index) => (
               <li key={index} className="product-card">
@@ -105,22 +122,11 @@ const Store = () => {
           </div>
         </ul>
       </div>
-      <div>
-        <Button type="primary" onClick={showModal}>
-          Agregar Producto
-        </Button>
-        <ModalForm
-          visible={visible}
-          onCancel={handleCancel}
-          onCreate={handleCreate}
-        />
-      </div>
     </div>
   );
 };
 
 export default Store;
-
 
 // import React, { useState } from "react";
 // import "./Store.css";
@@ -231,7 +237,6 @@ export default Store;
 // };
 
 // export default Store;
-
 
 // import React, { useState } from "react";
 // import { Button, Row, Col, Modal } from "antd";
@@ -352,5 +357,3 @@ export default Store;
 // };
 
 // export default Store;
-
-
