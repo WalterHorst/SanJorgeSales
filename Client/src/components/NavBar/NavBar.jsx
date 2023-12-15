@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaEnvelope,
+  FaShoppingCart,
+} from "react-icons/fa";
 import logo from "../../assets/Imagenes/Logo.png";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { Modal, Button } from "antd";
@@ -26,11 +31,13 @@ const NavBar = () => {
         <NavLink to="/">
           <img className="logo" src={logo} alt="Logo"></img>
         </NavLink>
+      
       </div>
       <div className="social-icons">
         <a href="mailto:TUCORREO@DOMINIO.COM">
           <FaEnvelope />
         </a>
+
         <a
           href="https://www.instagram.com/TUINSTAGRAM"
           target="_blank"
@@ -45,6 +52,10 @@ const NavBar = () => {
         >
           <FaWhatsapp />
         </a>
+        <a href="#/productos">
+              <FaShoppingCart /> 
+        </a>
+         
       </div>
       <div className="login-button-container">
         <NavLink to="/login">
@@ -82,6 +93,9 @@ const NavBar = () => {
             >
               <FaWhatsapp />
             </a>
+            <a href="#/productos">
+              <FaShoppingCart /> 
+        </a>
           </div>
           <NavLink to="/login">
             <button className="inicio" onClick={handleCancel}>
