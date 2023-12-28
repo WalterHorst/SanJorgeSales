@@ -32,10 +32,6 @@ module.exports = (sequelize) => {
             type: DataTypes.ENUM("Admin", "Moderator", "User"),
             allownull: false
         },
-        userBan: {
-            type: DataTypes.BOOLEAN,
-            allownull: false
-        },
         image: {
             type: DataTypes.STRING,
             allownull: true,
@@ -45,14 +41,6 @@ module.exports = (sequelize) => {
             type: DataTypes.JSONB,
             allownull: true
         },
-        recoveryCode: {
-            type: DataTypes.STRING,
-            allownull: true
-        },
-        recoveryTimer: {
-            type: DataTypes.DATE,
-            allownull: true
-        }
     }, {
         timestamps: false
     })

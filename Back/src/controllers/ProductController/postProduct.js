@@ -1,8 +1,8 @@
 const { Product } = require("../../db");
 
-const createProduct = async ({ name, image, price }) => {
+const createProduct = async ({ name, image, price, description }) => {
 
-    if (!(name || image || price)) {
+    if (!(name || image || price || description)) {
       throw Error("Data is missing for some products.");
     }
    
@@ -10,6 +10,7 @@ const createProduct = async ({ name, image, price }) => {
       name: name,
       image: image,
       price: price,
+      description: description, 
     });
 
 
