@@ -22,23 +22,11 @@ module.exports = (sequelize) => {
         type: DataTypes.FLOAT,
         allownull: false,
       },
-      unitsSold: {
-        type: DataTypes.INTEGER,
-        allownull: false,
-        defaultValue: 0
-      },
-      active: {
-        type: DataTypes.BOOLEAN,
-        allownull: false
-      },
-      stock: {
-        type: DataTypes.ARRAY(DataTypes.JSONB),
-        allownull: false,
-        defaultValue: [],
-      },
-      priceOnSale: {
+      description: {
         type: DataTypes.FLOAT,
+        allownull: false,
       },
+      
     },
     { timestamps: true }
   );
