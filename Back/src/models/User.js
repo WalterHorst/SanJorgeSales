@@ -38,7 +38,7 @@ module.exports = (sequelize) => {
             defaultValue: null
         },
         address: {
-            type: DataTypes.JSONB,
+            type: DataTypes.STRING,
             allownull: true
         },
     }, {
