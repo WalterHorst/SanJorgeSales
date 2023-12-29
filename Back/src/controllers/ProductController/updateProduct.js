@@ -10,7 +10,7 @@ const updateProduct = async ({ id, name, image, price, description }) => {
     where: { id },
   });
   if (!product) throw Error("Product not found.");
-  const updateProductId = await Product.update({
+  const updateProductId = await product.update({
     name: name ? name : product.name,
     image: image ? image : product.image,
     price: price ? price : product.price,
