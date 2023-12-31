@@ -3,7 +3,7 @@ const initialState = {
     allProductsBackUp: []
   };
   
-  const reducers = (state = initialState, action) => {
+  const reducer = (state = initialState, action) => {
     switch (action.type) {
   
       case "ALL_PRODUCTS":
@@ -18,4 +18,4 @@ const initialState = {
       }
   };
   
-  export default reducers;
+  export default reducer;

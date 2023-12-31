@@ -30,6 +30,7 @@ module.exports = (sequelize) => {
         },
         typeUser: {
             type: DataTypes.ENUM("Admin", "Moderator", "User"),
+            defaultValue:"User",
             allownull: false
         },
         image: {

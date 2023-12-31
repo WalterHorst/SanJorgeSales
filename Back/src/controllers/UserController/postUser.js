@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken')
 const { JWT_SECRET } = process.env;
 
-const postUser = async ({ name, surname, email, phone, password, address }) => {
+const postUser = async ({ name, surname, email, phone, password, address, image }) => {
 
   if (!(name || surname || email || password)) throw Error("Required data is missing. Please provide name, surname, email, and password.")
   if (password.length < 6 || password.length > 10) throw Error('Password must be between 6 and 10 characters in length.')
@@ -15,7 +15,7 @@ const postUser = async ({ name, surname, email, phone, password, address }) => {
       email: email,
       phone: phone ? phone : null,
       password: hashedPassword,
-      image: null,
+      image: image ? image : null ,
       address: address ? address : null
     }
   })
