@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useSelector, useDispatch } from 'react';
 import { Card, Button, Modal, Input, Select } from 'antd';
 import "./Productos.css"
 

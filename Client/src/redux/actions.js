@@ -15,4 +15,3 @@ export const getAllProducts = () => {
     console.error("Error al obtener datos:", error);
   }
 };
-
