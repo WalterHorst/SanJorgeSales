@@ -1,4 +1,5 @@
 const initialState = {
+
     allProducts: [],
     allProductsBackUp: []
   };
@@ -24,3 +25,4 @@ const initialState = {
   };
   
   export default reducer;
+
