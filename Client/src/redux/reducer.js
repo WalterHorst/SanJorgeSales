@@ -12,6 +12,11 @@ const initialState = {
           allProducts: action.payload,
           allProductsBackUp: action.payload,
         };
+        case "CREATE":
+        return {
+          ...state,
+          allProducts: action.payload,
+        };
   
       default:
         return { ...state };
