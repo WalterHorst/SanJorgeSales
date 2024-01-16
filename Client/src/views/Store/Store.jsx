@@ -108,7 +108,8 @@ const Store = () => {
             {productList.map((product, index) => (
               <li key={index} className="product-card">
                 <img
-                  src={product.image ? product.image[0].preview : ""}
+                  src={product.image} 
+                  // ? product.image[0].preview : ""}
                   alt={product.name}
                   className="product-image"
                 />

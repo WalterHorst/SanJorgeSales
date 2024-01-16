@@ -90,17 +90,19 @@ const ModalForm = ({ visible, onCancel, onCreate }) => {
         <Form.Item
           name="image"
           label="Imagen del Producto"
-          valuePropName="fileList"
-          getValueFromEvent={(e) =>
-            e.fileList.map((file) => ({
-              ...file,
-              preview: URL.createObjectURL(file.originFileObj),
-            }))
-          }
+          // valuePropName="fileList"
+          // getValueFromEvent={(e) =>
+          //   e.fileList.map((file) => ({
+          //     ...file,
+          //     preview: URL.createObjectURL(file.originFileObj),
+          //   }))
+          // }
         >
-          <Upload name="logo" action="/upload.do" listType="picture">
+           <Input.TextArea />
+
+          {/* <Upload name="logo" action="/upload.do" listType="picture">
             <Button icon={<UploadOutlined />}>Subir Imagen</Button>
-          </Upload>
+          </Upload> */}
         </Form.Item>
       </Form>
     </Modal>
