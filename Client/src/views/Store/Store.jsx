@@ -4,21 +4,25 @@ import "./Store.css";
 import { Button } from "antd";
 import ModalForm from "../../components/ModalProduct/ModalProduct";
 import EditStoreModal from "../../components/ModalStore/ModalStore";
+import {createProducts}  from "../../redux/actions";
+import { useDispatch } from "react-redux";
+
 
 const Store = () => {
   const [productList, setProductList] = useState([]);
-
+  const dispatch = useDispatch()
+  
   const [visible, setVisible] = useState(false);
   const [editModalVisible, setEditModalVisible] = useState(false);
   const [storeData, setStoreData] = useState({
     coverPhotoUrl:
-      "https://cdn.icon-icons.com/icons2/1856/PNG/512/add-photo-alternate_116693.png",
+    "https://cdn.icon-icons.com/icons2/1856/PNG/512/add-photo-alternate_116693.png",
     profilePictureUrl:
-      "https://cdn.icon-icons.com/icons2/1856/PNG/512/add-photo-alternate_116693.png",
+    "https://cdn.icon-icons.com/icons2/1856/PNG/512/add-photo-alternate_116693.png",
     sellerName: "",
     sellerLocation: "",
   });
-
+  
   const showModal = () => {
     setVisible(true);
   };
@@ -30,7 +34,8 @@ const Store = () => {
   const handleCreate = (values) => {
     console.log("Received values:", values);
     setProductList([...productList, values]);
-    // Aquí puedes realizar la lógica para enviar los datos del formulario al backend
+    console.log(productList, "dasdsadsad");
+    dispatch(createProducts(values))
     setVisible(false);
   };
 
@@ -103,7 +108,8 @@ const Store = () => {
             {productList.map((product, index) => (
               <li key={index} className="product-card">
                 <img
-                  src={product.image ? product.image[0].preview : ""}
+                  src={product.image} 
+                  // ? product.image[0].preview : ""}
                   alt={product.name}
                   className="product-image"
                 />

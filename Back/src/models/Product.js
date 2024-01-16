@@ -26,7 +26,14 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allownull: false,
       },
-      
+      category: {
+        type: DataTypes.STRING,
+        allownull: false,
+      },
+      brand: {
+        type: DataTypes.STRING,
+        allownull: false,
+      },
     },
     { timestamps: true }
   );
