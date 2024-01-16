@@ -140,11 +140,13 @@ const Productos = () => {
         {filteredProducts.map((product) => (
           <Card
           brand={product.brand}
+          image={product.image}
             category={product.category}
             key={product.id}
             title={product.name}
             style={{ width: 300, margin: '16px' }}
           >
+           <img src={product.image} alt={product.name} />
             <p>{product.description}</p>
             <p>Precio: ${product.price}</p>
             <p>Categoria: {product.category}</p>

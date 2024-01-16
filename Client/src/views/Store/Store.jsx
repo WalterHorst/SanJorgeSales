@@ -36,7 +36,6 @@ const Store = () => {
     setProductList([...productList, values]);
     console.log(productList, "dasdsadsad");
     dispatch(createProducts(values))
-    // Aquí puedes realizar la lógica para enviar los datos del formulario al backend
     setVisible(false);
   };
 

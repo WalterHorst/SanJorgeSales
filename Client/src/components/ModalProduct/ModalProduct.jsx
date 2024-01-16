@@ -59,6 +59,33 @@ const ModalForm = ({ visible, onCancel, onCreate }) => {
         >
           <Input.TextArea />
         </Form.Item>
+        
+        <Form.Item
+          name="brand"
+          label="marca del Producto"
+          rules={[
+            {
+              required: true,
+              message: "Por favor ingrese la marca del producto",
+            },
+          ]}
+        >
+          <Input.TextArea />
+        </Form.Item>
+        
+        <Form.Item
+          name="category"
+          label="categoria del Producto"
+          rules={[
+            {
+              required: true,
+              message: "Por favor ingrese la categoria del producto",
+            },
+          ]}
+        >
+            <Input.TextArea />
+        </Form.Item>
+
 
         <Form.Item
           name="image"
