@@ -32,3 +32,4 @@ export const createProducts = (product) => {
     console.error("Error al obtener datos:", error);
   }
 };
+
