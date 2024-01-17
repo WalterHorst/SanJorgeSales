@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SingUp.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import {createUser} from "../../redux/actions"
 
@@ -10,12 +10,14 @@ const Login = (props) => {
   const [address, setaddress] = useState("");
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
 const handleSingUp = async () => {
   console.log('Datos que estás enviando:', { name, password, address, email });
   try {
     await dispatch(createUser({ name, password, address, email }));
     alert(`bienvenido a kymoon, ${name} !`);
+    navigate('/productos')
   } catch (error) {
     if (error.response && error.response.status === 400) {
       alert('El email ya esta registrado. Por favor, elige otro email o inicia sesión.');
