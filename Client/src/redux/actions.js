@@ -49,4 +49,16 @@ export const createUser = ({ name, password, address, email }) => {
   };
 };
 
+export const loginUser = ({ name, password}) => {
+  return async (dispatch) => {
+    try {
+      const endpoint = "http://localhost:3001/user/login";
+      const { data } = await axios.post(endpoint, { name, password });
+    } catch (error) {
+      throw error; 
+    }
+  };
+};
+
+
 

@@ -11,12 +11,11 @@ const Login = (props) => {
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
 
-////////////////////
 const handleSingUp = async () => {
   console.log('Datos que estás enviando:', { name, password, address, email });
   try {
     await dispatch(createUser({ name, password, address, email }));
-    alert('Usuario creado exitosamente');
+    alert(`bienvenido a kymoon, ${name} !`);
   } catch (error) {
     if (error.response && error.response.status === 400) {
       alert('El email ya esta registrado. Por favor, elige otro email o inicia sesión.');
