@@ -33,7 +33,6 @@ export const createProducts = (product) => {
   }
 };
 
-
 export const createUser = ({ name, password, address, email }) => {
   return async (dispatch) => {
     try {
@@ -59,6 +58,5 @@ export const loginUser = ({ name, password}) => {
     }
   };
 };
-
 
 

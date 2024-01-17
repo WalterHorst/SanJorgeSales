@@ -23,12 +23,12 @@ const reducer = (state = initialState, action) => {
         ...state,
         allUsers: action.payload,
       };
-
-
+      
     default:
       return { ...state };
   }
 };
 
 export default reducer;
+
 
