@@ -5,13 +5,13 @@ const { JWT_SECRET } = process.env;
 
 const postUser = async ({ name, surname, email, phone, password, address, image }) => {
 
-  if (!(name || surname || email || password)) throw Error("Required data is missing. Please provide name, surname, email, and password.")
+  if (!(name || email || password)) throw Error("Required data is missing. Please provide name, surname, email, and password.")
   if (password.length < 6 || password.length > 10) throw Error('Password must be between 6 and 10 characters in length.')
   const hashedPassword = await bcrypt.hash(password, 10);
   const [user, created] = await User.findOrCreate({
     where: {
       name: name,
-      surname: surname,
+      surname: surname ? surname : null ,
       email: email,
       phone: phone ? phone : null,
       password: hashedPassword,

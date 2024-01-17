@@ -34,7 +34,7 @@ const Store = () => {
   const handleCreate = (values) => {
     console.log("Received values:", values);
     setProductList([...productList, values]);
-    console.log(productList, "dasdsadsad");
+    console.log(productList);
     dispatch(createProducts(values))
     setVisible(false);
   };
