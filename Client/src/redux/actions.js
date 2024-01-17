@@ -33,3 +33,30 @@ export const createProducts = (product) => {
   }
 };
 
+export const createUser = ({ name, password, address, email }) => {
+  return async (dispatch) => {
+    try {
+      const endpoint = "http://localhost:3001/user/create";
+      const { data } = await axios.post(endpoint, { name, password, address, email });
+      dispatch({
+        type: "CREATE_USER",
+        payload: data,
+      });
+    } catch (error) {
+      throw error; // Lanzar el error para manejarlo en el componente
+    }
+  };
+};
+
+export const loginUser = ({ name, password}) => {
+  return async (dispatch) => {
+    try {
+      const endpoint = "http://localhost:3001/user/login";
+      const { data } = await axios.post(endpoint, { name, password });
+    } catch (error) {
+      throw error; 
+    }
+  };
+};
+
+

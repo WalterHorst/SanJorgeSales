@@ -10,8 +10,6 @@ import { useDispatch } from "react-redux";
 
 const Store = () => {
   const [productList, setProductList] = useState([]);
-  const dispatch = useDispatch()
-  
   const [visible, setVisible] = useState(false);
   const [editModalVisible, setEditModalVisible] = useState(false);
   const [storeData, setStoreData] = useState({
@@ -22,6 +20,7 @@ const Store = () => {
     sellerName: "",
     sellerLocation: "",
   });
+  const dispatch = useDispatch()
   
   const showModal = () => {
     setVisible(true);
@@ -34,7 +33,6 @@ const Store = () => {
   const handleCreate = (values) => {
     console.log("Received values:", values);
     setProductList([...productList, values]);
-    console.log(productList, "dasdsadsad");
     dispatch(createProducts(values))
     setVisible(false);
   };
